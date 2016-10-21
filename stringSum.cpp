@@ -20,15 +20,18 @@ int main()
     int n;
 
     cin >> n;
-    char *str = (char*)malloc(1000);
-    scanf("%s",str );
-
-    int sum = 0;
-    // cout << strlen(str);
-    for(int i=0;i<strlen(str);i++)
+    for(int i=0;i<n;i++)
     {
-        if('1' <= str[i] && str[i] <= '9') sum += str[i] - '0';
+        char *str = (char*)malloc(1000);
+        scanf("%s",str );
+
+        int sum = 0;
+        // cout << strlen(str);
+        for(int i=0;i<strlen(str);i++)
+        {
+            if('1' <= str[i] && str[i] <= '9') sum += str[i] - '0';
+        }
+        cout << sum << endl;
     }
-    cout << sum << endl;
     return 0;
 }
